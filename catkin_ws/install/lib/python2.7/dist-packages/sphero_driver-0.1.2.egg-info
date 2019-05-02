@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: sphero_driver
+Version: 0.1.2
+Summary: sphero_driver provides a python based driver for interfacing with the sphero over bluetooth.
+Home-page: http://ros.org/wiki/sphero_driver
+Author: Melonee Wise
+Author-email: melonee@meloneewise.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

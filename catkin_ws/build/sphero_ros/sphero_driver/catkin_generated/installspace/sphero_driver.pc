@@ -1,0 +1,8 @@
+prefix=/home/nico/Documents/projects/waypoint/catkin_ws/install
+
+Name: sphero_driver
+Description: Description of sphero_driver
+Version: 0.1.2
+Cflags: 
+Libs: -L/home/nico/Documents/projects/waypoint/catkin_ws/install/lib 
+Requires: 

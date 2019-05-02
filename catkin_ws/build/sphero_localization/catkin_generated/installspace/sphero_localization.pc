@@ -1,0 +1,8 @@
+prefix=/home/nico/Documents/projects/waypoint/catkin_ws/install
+
+Name: sphero_localization
+Description: Description of sphero_localization
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nico/Documents/projects/waypoint/catkin_ws/install/lib 
+Requires: 

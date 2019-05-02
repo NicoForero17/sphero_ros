@@ -1,0 +1,2 @@
+control:gui:sphero_localization:sphero_ros/sphero_bringup:sphero_ros/sphero_description:sphero_ros/sphero_driver:sphero_ros/sphero_node:vision
+-DCATKIN_DEVEL_PREFIX=/home/nico/Documents/projects/waypoint/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nico/Documents/projects/waypoint/catkin_ws/install -G Unix Makefiles

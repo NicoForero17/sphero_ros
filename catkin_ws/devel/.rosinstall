@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nico/Documents/projects/waypoint/catkin_ws/devel/setup.sh

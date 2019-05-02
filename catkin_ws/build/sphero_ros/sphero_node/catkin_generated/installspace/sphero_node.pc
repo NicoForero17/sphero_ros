@@ -1,0 +1,8 @@
+prefix=/home/nico/Documents/projects/waypoint/catkin_ws/install
+
+Name: sphero_node
+Description: Description of sphero_node
+Version: 0.1.2
+Cflags: -I/home/nico/Documents/projects/waypoint/catkin_ws/install/include
+Libs: -L/home/nico/Documents/projects/waypoint/catkin_ws/install/lib 
+Requires: std_msgs dynamic_reconfigure message_runtime

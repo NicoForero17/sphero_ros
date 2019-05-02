@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~red" : \b [double] red min: 0.0, default: 0.0, max: 1.0
+- \b "~blue" : \b [double] blue min: 0.0, default: 0.0, max: 1.0
+- \b "~green" : \b [double] green min: 0.0, default: 0.0, max: 1.0
+

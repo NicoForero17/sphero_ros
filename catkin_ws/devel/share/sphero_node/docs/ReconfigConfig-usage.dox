@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="Reconfig" pkg="sphero_node" type="Reconfig">
+  <param name="red" type="double" value="0.0" />
+  <param name="blue" type="double" value="0.0" />
+  <param name="green" type="double" value="0.0" />
+</node>
+\endverbatim
+
