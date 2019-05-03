@@ -14,11 +14,23 @@ class sphero_control():
         self.twist_pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
 
         self.sphero_location = Pose2D()
+        self.mouse_click_location = Pose2D()
+
 
     def sphero_location_callback(self,data):
 
         self.sphero_location.x = data.x
         self.sphero_location.y = data.y
+
+        # twist_msg = Twist()
+
+        # kx =0.3
+        # ky =-0.3
+
+        # twist_msg.linear.x = kx*(self.mouse_click_location.x - self.sphero_location.x)
+        # twist_msg.linear.y = ky*(self.mouse_click_location.y - self.sphero_location.y)
+       
+        # self.twist_pub.publish(twist_msg)
 
 
     def callback(self,data):
@@ -26,14 +38,15 @@ class sphero_control():
                 
         twist_msg = Twist()
 
-        kx =2000/554.25
-        ky =2000/554.25
+        kx =0.5
+        ky =-0.5
 
-        twist_msg.linear.y = kx*(data.x - self.sphero_location.x)
-        twist_msg.linear.z = ky*(data.y - self.sphero_location.y)
-        #linear = Vector3((kx(data.x - self.sphero_location.x),))
+        self.mouse_click_location.x = data.x
+        self.mouse_click_location.y = data.y
 
-
+        twist_msg.linear.x = kx*(self.mouse_click_location.x - self.sphero_location.x)
+        twist_msg.linear.y = ky*(self.mouse_click_location.y - self.sphero_location.y)
+       
         self.twist_pub.publish(twist_msg)
 
 def main():

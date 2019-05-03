@@ -25,7 +25,7 @@ class gui_class():
         if(event == cv2.EVENT_LBUTTONDOWN):
             self.point2d_msg.x = x
             self.point2d_msg.y = y
-            print(self.point2d_msg)
+            
             self.pose2d_pub.publish(self.point2d_msg)
         
 

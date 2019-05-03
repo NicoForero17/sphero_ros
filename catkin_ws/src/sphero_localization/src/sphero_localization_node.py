@@ -33,7 +33,7 @@ class sphero_localization_node():
     res = cv2.bitwise_and(cv_image,cv_image,mask = mask)
     #cv2.imshow('cv_image',cv_image)
     #cv2.imshow('mask',mask)
-    #cv2.imshow('result',res)
+    cv2.imshow('result',res)
     
     #print type(cv_image)
 
