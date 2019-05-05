@@ -15,6 +15,7 @@ class sphero_control():
 
         self.sphero_location = Pose2D()
         self.mouse_click_location = Pose2D()
+        self.mouse_clicked = False
 
 
     def sphero_location_callback(self,data):
@@ -36,26 +37,44 @@ class sphero_control():
     def callback(self,data):
 
                 
-        twist_msg = Twist()
+        # twist_msg = Twist()
 
-        kx =0.5
-        ky =-0.5
+        # kx =0.5
+        # ky =-0.5
 
         self.mouse_click_location.x = data.x
         self.mouse_click_location.y = data.y
 
-        twist_msg.linear.x = kx*(self.mouse_click_location.x - self.sphero_location.x)
-        twist_msg.linear.y = ky*(self.mouse_click_location.y - self.sphero_location.y)
+        self.mouse_clicked = True
+
+        # twist_msg.linear.x = kx*(self.mouse_click_location.x - self.sphero_location.x)
+        # twist_msg.linear.y = ky*(self.mouse_click_location.y - self.sphero_location.y)
        
-        self.twist_pub.publish(twist_msg)
+        # self.twist_pub.publish(twist_msg)
 
 def main():
   ic = sphero_control()
   rospy.init_node('control', anonymous=True)
+
+  while not rospy.is_shutdown():
+    if ic.mouse_clicked:
+      twist_msg = Twist()
+
+      kx =0.2
+      ky =-0.2
+
+      twist_msg.linear.x = kx*(ic.mouse_click_location.x - ic.sphero_location.x)
+      twist_msg.linear.y = ky*(ic.mouse_click_location.y - ic.sphero_location.y)
+        
+      ic.twist_pub.publish(twist_msg)
+
   try:
     rospy.spin()
   except KeyboardInterrupt:
     print("Shutting down")
+  
+
+  
 
 if __name__ == '__main__':
   main()        

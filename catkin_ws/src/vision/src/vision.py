@@ -5,7 +5,7 @@ import numpy as np
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 
-cam_num = 0
+cam_num = 1
 
 def publish_image():
     cap = cv2.VideoCapture(cam_num)
