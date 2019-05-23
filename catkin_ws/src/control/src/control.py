@@ -72,8 +72,8 @@ def main():
       ky =-0.2
       kx_int =0.001
       ky_int =-0.001
-      kx_diff =0.0
-      ky_diff =-0.0
+      kx_diff =0.01
+      ky_diff =-0.01
 
       alpha = 0.99
       
