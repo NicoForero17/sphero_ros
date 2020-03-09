@@ -1,4 +1,7 @@
 # Sphero_ros
+## Demo 
+https://www.youtube.com/watch?v=wpUHJYTbFVU
+------------------------------------------------------------------------------------------
 ## What is this?
 ------------------------------------------------------------------------------------------
 Just a humble project to learn ROS with a beauty little Robot called Sphero SPKR 2.0 :) (but it also work with others Spherio versions)
